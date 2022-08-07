@@ -1,0 +1,92 @@
+* {
+    margin: unset;
+    font-size: 50px;
+    font-family: fantasy;
+}
+#canvas {
+    border: 2px solid;
+    
+}
+#cursor {   
+    z-index: 999;
+    position: fixed;
+    height: 20px;
+    width: 20px;
+    background-color: lightsalmon;
+    border-radius: 50%;
+    box-shadow: 0 0 20px lightsalmon,
+                0 0 40px lightsalmon,
+                0 0 60px lightsalmon;
+
+    transform: translate(100%, 100%);
+    display: none;
+    animation: color 2s infinite;
+}
+#centrar {
+    background-color: rgb(6, 23, 61);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    max-height: fit-content;
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    cursor: none;
+}
+@keyframes color {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+#Q {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: white;
+    left: 3px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+@keyframes shad {
+    0%{
+        box-shadow: 0 0 4px crimson,
+                0 0 5px red,
+                0 0 7px lightcoral,
+                0 0 15px rgb(96, 18, 96);
+    }
+    20%{
+        box-shadow: 0 0 20px crimson,
+                0 0 25px red,
+                0 0 35px lightcoral,
+                0 0 75px rgb(96, 18, 96);
+    }
+    50%{
+        box-shadow: 0 0 40px crimson,
+                0 0 50px red,
+                0 0 70px lightcoral,
+                0 0 150px rgb(96, 18, 96);
+    }
+    80%{
+        box-shadow: 0 0 20px crimson,
+                0 0 25px red,
+                0 0 35px lightcoral,
+                0 0 75px rgb(96, 18, 96);
+    }
+    100%{
+        box-shadow: 0 0 4px crimson,
+                0 0 5px red,
+                0 0 7px lightcoral,
+                0 0 15px rgb(96, 18, 96);
+    }
+}
+
+#canvas:hover {
+    animation: shad 2s infinite linear;
+}
